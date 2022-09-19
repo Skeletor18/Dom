@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    const div = document.createElement('div')
+    
+    const divcontainer = document.createElement('div')
+
+    const ul = document.createElement("ul");
+
+    const li_1 = document.createElement('li')    
+    const li_2 = document.createElement('li')
+    const li_3 = document.createElement('li')
+
+    const link_1 = document.createElement('a')
+    const link_2 = document.createElement('a')
+    const link_3 = document.createElement('a')
+
+    ul.append(li_1,li_2,li_3)
+    div.append(divcontainer,ul)
+   
+    li_1.append(link_1)
+    li_2.append(link_2)
+    li_3.append(link_3)
+
+    document.body.style.width = '100%'
+
+    div.style.width = '25%'
+    div.style.boxSizing = 'border-box'
+    div.style.margin  = 'auto'
+
+    divcontainer.style.border = '2px solid red'
+    divcontainer.style.borderRadius = '5px'
+    divcontainer.style.padding = '8px'
+    divcontainer.textContent = `Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Voluptatem incidunt cumque in! In, omnis repellendus.`
+
+    ul.style.display = 'flex'
+    ul.style.justifyContent = 'space-around'
+    ul.style.listStyleType = "none";
+    ul.style.padding = '0px'
+
+    link_1.setAttribute('href',"https://www.google.ru/");
+    link_1.textContent = "google";
+
+    link_2.setAttribute('href',"https://intocode.ru/");
+    link_2.textContent = "intocode";
+
+    link_3.setAttribute('href',"https://www.instagram.com/");
+    link_3.textContent = "instagram";
+
+    
+    document.body.prepend(div)
+
+  </script>
+</body>
+</html>
